@@ -1,4 +1,4 @@
-package day04_Maven;
+package day04_maven;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -30,10 +30,16 @@ public class C01_MavenIlkTest {
         // 3- “Samsung headphones” ile arama yapalim
         aramaKutusu.sendKeys("Samsung headphones", Keys.ENTER);
         // 4- Bulunan sonuc sayisini yazdiralim
-        WebElement sanucuYazisi= driver.findElement(By.xpath("(//*[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
-        System.out.println(sanucuYazisi.getText());
+       // WebElement sanucuYazisi= driver.findElement(By.xpath("(//*[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
+       // System.out.println(sanucuYazisi.getText());
+        String [] sonucYazisi=driver.findElement
+                (By.xpath("(//*[@class='a-section a-spacing-small a-spacing-top-small'])[1]"))
+                .getText().split(" ");
+        System.out.println("day04_maven icin arama sonucu " +sonucYazisi[2]);
         // 5- Ilk urunu tiklayalim
+        driver.findElement(By.xpath("//*[@class='s-image'][1]")).click();
         // 6- Sayfadaki tum basliklari yazdiralim
+        System.out.println("Birinci basliklar " + driver.findElement(By.xpath("//h1")).getText());
 
     }
 }
