@@ -1,4 +1,4 @@
-package day5_JUnit;
+package day05_JUnit;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
@@ -46,8 +46,11 @@ public class C03_BeforeClassAfterClass {
         driver.get("https://www.hepsiburada.com");
 
         /*
-        befero afterda her test icin farkli browser acip kapatiyor
+        1- befero afterda her test icin farkli browser acip kapatiyor,
         beforeClass AfterClass'ta ise tek browser'dan testleri acip kapatiyor
+        2-before methodu ve afterda da her bir method icin ayri ayri calisir
+        beforeClass ve AfterClass a ise once before methodu çalışır sonra diger methodlar
+        calisir ve en sonunda after methodu çalışır
          */
     }
 }
