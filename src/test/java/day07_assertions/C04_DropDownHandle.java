@@ -61,6 +61,8 @@ public class C04_DropDownHandle {
         //Tüm dropdown değerleri(value) yazdırın
         List<WebElement> butunDdm = driver.findElements(By.xpath("//option"));
         butunDdm.forEach(t-> System.out.println(t.getText()));
+        //butunDdm.stream().forEach(t-> System.out.println(t.getText()));
+
         System.out.println("=========================================");
         //List <WebElement> tumDdm = select.getOptions();
         //tumDdm.forEach(t-> System.out.println(t.getText()));
@@ -74,6 +76,7 @@ public class C04_DropDownHandle {
         if (butunDdm.size()==4){
             System.out.println("True");
         }else System.out.println("False");
-        Assert.assertNotEquals(butunDdm.size(),4);
+        // 2 yol
+        Assert.assertNotEquals("Test failed",4,butunDdm.size());
     }
 }

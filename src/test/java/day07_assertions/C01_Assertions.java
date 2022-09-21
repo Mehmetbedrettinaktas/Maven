@@ -33,7 +33,7 @@ public class C01_Assertions {
       // driver.close();
    }
    @Test
-    public void test1(){
+    public void test1() throws InterruptedException {
        // http://automationpractice.com/index.php sayfasina gidelim
        driver.get("http://automationpractice.com/index.php");
        // Sign in butonuna basalim
@@ -41,6 +41,8 @@ public class C01_Assertions {
        // Email kutusuna @isareti olmayan bir mail yazip enter’a
        WebElement emailKutusu= driver.findElement(By.xpath("//*[@id='email_create']"));
        emailKutusu.sendKeys("mehmet.com");
+       driver.findElement(By.xpath("//*[@class='icon-user left']")).click();
+       Thread.sleep(5000);
        // bastigimizda “Invalid email address” uyarisi ciktigini test edelim
        Assert.assertTrue(driver.findElement(By.xpath("//*[text()='Invalid email address.']")).isDisplayed());
        // mehmet.com kismini degistirecegim

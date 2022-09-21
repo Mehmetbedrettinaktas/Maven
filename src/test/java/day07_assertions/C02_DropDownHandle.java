@@ -57,8 +57,8 @@ public class C02_DropDownHandle {
     @Test
     public void test2(){
         // 1.Kategori menusunden Books secenegini secin
-        WebElement books= driver.findElement(By.xpath("//*[@id='searchDropdownBox']"));
-        books.sendKeys("Books");
+        WebElement arananKelime= driver.findElement(By.xpath("//*[@id='searchDropdownBox']"));
+        arananKelime.sendKeys("Books");
         // 2.Arama kutusuna Java yazin ve aratin
         driver.findElement(By.cssSelector("input[id='twotabsearchtextbox']")).sendKeys("Java", Keys.ENTER);
         // 3.Bulunan sonuc sayisini yazdirin
