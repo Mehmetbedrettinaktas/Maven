@@ -40,6 +40,7 @@ public class C01_RadioButton {
         //    https://www.facebook.com adresine gidin
         driver.get("https://www.facebook.com");
         //    Cookies’i kabul edin
+        driver.findElement(By.xpath("(//*[@value='1'])[3]")).click();
         //    “Create an Account” button’una basin
         driver.findElement(By.xpath("(//*[@role='button'])[2]")).click();
         //    “radio buttons” elementlerini locate edin

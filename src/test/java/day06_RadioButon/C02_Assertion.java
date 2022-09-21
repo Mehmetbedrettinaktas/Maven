@@ -70,6 +70,7 @@ public class C02_Assertion {
     @Test
     public void test4(){
         //d- Url'nin www.facebook.com olduğunu test edin
+        driver.get("https://www.facebook.com");
         String expectedUrl = "www.facebook.com";
         String actualUrl = driver.getCurrentUrl();
         Assert.assertNotEquals(expectedUrl,actualUrl);

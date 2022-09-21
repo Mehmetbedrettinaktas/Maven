@@ -32,7 +32,8 @@ public class C04_Assertion {
     }
     @AfterClass
     public static void tearDown() {
-        driver.close();
+
+        //driver.close();
     }
     @Test
     public void test1(){
