@@ -1,6 +1,9 @@
 package day09_iframe;
 
-public class C02_IFrame {
+import org.junit.Test;
+import utilities.TestBaseBeforeAfter;
+
+public class C02_IFrame extends TestBaseBeforeAfter {
     /*
     Bir class olusturun: IframeTest02
     1) http://demo.guru99.com/test/guru99home/ sitesine gidiniz
@@ -10,4 +13,9 @@ public class C02_IFrame {
     5) ikinci iframe'deki (Jmeter Made Easy) linke (https://www.guru99.com/live-selenium-project.html)
     tıklayınız
      */
+
+    @Test
+    public void test1() {
+
+    }
 }

@@ -24,7 +24,7 @@ public abstract class TastBaseBeforeClassAfterClass {
 
     @AfterClass
     public static void tearDown() {
-        // driver.close();
+         driver.close();
         // driver.quit();
     }
 }
