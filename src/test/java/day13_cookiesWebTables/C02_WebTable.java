@@ -37,7 +37,7 @@ public class C02_WebTable extends TestBaseBeforeAfter
         System.out.println("Tablodaki satir sayisi: "+satirSayisi.size());
         //Table body’sinde bulunan satirlari(rows) konsolda yazdırın.
         satirSayisi.forEach(t-> System.out.println(t.getText()));
-        //4.satirdaki(row) elementleri konsolda yazdırın.
+        //  4.satirdaki(row) elementleri konsolda yazdırın.
         System.out.println(driver.findElement(By.xpath("//tbody//tr[4]")).getText());
 
     }
@@ -68,7 +68,7 @@ public class C02_WebTable extends TestBaseBeforeAfter
 
     }
 
-    private void login() {
+    public void login() {
         driver.get("https://www.hotelmycamp.com/admin/HotelRoomAdmin");
       //  driver.findElement(By.xpath("//input[@id='UserName']")).click();
         Actions actions=new Actions(driver);
