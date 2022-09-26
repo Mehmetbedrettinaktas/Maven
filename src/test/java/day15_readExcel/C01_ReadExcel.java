@@ -1,15 +1,13 @@
-package day14_excel;
+package day15_readExcel;
 
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class C05_ReadExcel {
+public class C01_ReadExcel {
     @Test
     public void readExcelTest() throws IOException {
         //- Dosya yolunu bir String degiskene atayalim
@@ -19,18 +17,20 @@ public class C05_ReadExcel {
         //- Workbook objesi olusturalim,parameter olarak fileInputStream objesini girelim
         //- WorkbookFactory.create(fileInputStream)
         Workbook workbook = WorkbookFactory.create(fis);
+        // excel tablosundaki tum tabloyu konsola yazdiralim.
 
-        //-sayfa 2'ye gidip satir sayisinin 4, kullanilan satir sayisinin ise 15 oldugunu test edin
+        int sonSatir = workbook.getSheet("Sayfa1").getLastRowNum();
+        String tablo = "";
+        for (int i = 0; i <= sonSatir; i++) {
+            tablo = workbook.getSheet("Sayfa1").getRow(i).getCell(0).toString() + ", "
+                    + workbook.getSheet("Sayfa1").getRow(i).getCell(1).toString() + ", "
+                    + workbook.getSheet("Sayfa1").getRow(i).getCell(2).toString() + ", "
+                    + workbook.getSheet("Sayfa1").getRow(i).getCell(3).toString();
 
-        int sonsatir= workbook.getSheet("Sayfa2").getLastRowNum();
-        System.out.println("sonsatir = " + sonsatir);
-        int expectedLastRow=15;
-        Assert.assertEquals(expectedLastRow,sonsatir+1);
+            System.out.println(tablo+" ");
 
-        int kullanilanSatir=workbook.getSheet("Sayfa2")
-                .getPhysicalNumberOfRows(); // Excel tablosundaki kullanilan satir sayisni bu method ile aliriz
-        int expectedKullanilansatir=4;
-        Assert.assertEquals(expectedKullanilansatir,kullanilanSatir);
+        }
+
 
     }
 }

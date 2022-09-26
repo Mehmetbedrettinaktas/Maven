@@ -1,0 +1,13 @@
+ /*
+        // 1.yol
+        FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntusu/AllPage"+tarih+".jpeg"));
+        // 2, yol
+        Faker faker =new Faker();
+       // FileUtils.copyFile(tumSayfaResmi, new File("target/ekranGoruntusu/"+faker.name()));
+        // 3.Yol
+       // FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntusu/"+faker.name().name()+"allPage"+tarih+".jpeg"));
+        // 4.yol
+       // FileUtils.copyFile(tumSayfaResmi,new File("target/ekranGoruntusu/allPage"+tarih+".jpeg"));
+
+
+       */
