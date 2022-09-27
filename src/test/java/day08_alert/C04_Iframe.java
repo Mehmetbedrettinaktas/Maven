@@ -42,7 +42,7 @@ public class C04_Iframe {
          */
         List<WebElement>iframeList=new ArrayList<>(driver.findElements(By.xpath("//iframe")));
         driver.switchTo().frame(iframeList.get(0));
-        driver.findElement(By.xpath("//*[@aria-label='Oynat']")).click();
+        driver.findElement(By.xpath("//button[@class='ytp-large-play-button ytp-button ytp-large-play-button-red-bg']")).click();
         //Youtube videosunu çalıştırınız
      /*   WebElement youtubeFrame = driver.findElement(By.xpath("//*[@src='https://www.youtube.com/embed/owsfdh4gxyc']"));
         driver.switchTo().frame(youtubeFrame);
