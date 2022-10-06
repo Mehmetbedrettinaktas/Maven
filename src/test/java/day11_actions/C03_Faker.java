@@ -14,7 +14,7 @@ public class C03_Faker extends TestBaseBeforeAfter {
 
         // "https://facebook.com"  Adresine gidin
         driver.get("https://facebook.com");
-        driver.findElement(By.xpath("//*[text()='Temel ve isteğe bağlı çerezlere izin ver']")).click();
+        driver.findElement(By.xpath("//button[@class='_42ft _4jy0 _9xo7 _4jy3 _4jy1 selected _51sy']")).click();
         //“create new account”  butonuna basin
         driver.findElement(By.xpath("//*[text()='Yeni Hesap Oluştur']")).click();
 

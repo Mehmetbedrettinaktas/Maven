@@ -24,12 +24,12 @@ public class C05_ReadExcel {
 
         int sonsatir= workbook.getSheet("Sayfa2").getLastRowNum();
         System.out.println("sonsatir = " + sonsatir);
-        int expectedLastRow=15;
-        Assert.assertEquals(expectedLastRow,sonsatir+1);
+        int expectedLastRow=14;
+        Assert.assertEquals(expectedLastRow,sonsatir);
 
         int kullanilanSatir=workbook.getSheet("Sayfa2")
                 .getPhysicalNumberOfRows(); // Excel tablosundaki kullanilan satir sayisni bu method ile aliriz
-        int expectedKullanilansatir=4;
+        int expectedKullanilansatir=5;
         Assert.assertEquals(expectedKullanilansatir,kullanilanSatir);
 
     }

@@ -25,12 +25,12 @@ public abstract class TestBaseBeforeAfter {
         actions = new Actions(driver);
 
         LocalDateTime date=LocalDateTime.now();
-        DateTimeFormatter formater=DateTimeFormatter.ofPattern("YY/MM/dd/HH:mm:ss");
+        DateTimeFormatter formater=DateTimeFormatter.ofPattern("YYMMddHHmmss");
         tarih= date.format(formater);
     }
     @After
     public void tearDown(){
-        driver.close();
+       // driver.close();
          //driver.quit();
 
 

@@ -38,7 +38,7 @@ public class C03_WindowHandle {
          driver.quit();
     }
     @Test
-    public void test01(){
+    public void test01() throws InterruptedException {
 
         // Amazon anasayfa adresine gidin.
         driver.get("https://www.amazon.com");
@@ -52,7 +52,8 @@ public class C03_WindowHandle {
         Assert.assertTrue(actualTitle.contains(expectedTitle));
 
         //  Yeni bir tab olusturup, acilan tab’da techproeducation.com adresine gidin
-        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.switchTo().newWindow(WindowType.TAB);
+      //  driver.switchTo().newWindow(WindowType.WINDOW);
         driver.get("https://www.techproeducation.com");
 
         //  Sayfa title’nin “TECHPROEDUCATION” icerdigini test edin
@@ -66,6 +67,7 @@ public class C03_WindowHandle {
         Assert.assertTrue(driver.getTitle().contains("Walmart"));
 
         //  Ilk acilan sayfaya donun ve amazon sayfasina dondugunuzu test edin
+        Thread.sleep(3000);
         driver.switchTo().window(amazonWindowshandel);
 
         //  Collapse

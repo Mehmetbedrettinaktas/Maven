@@ -16,7 +16,7 @@ import java.io.IOException;
 public class C04_GetScreenShot extends TestBaseBeforeAfter {
     @Test
     public void test1() throws IOException {
-        //Amazon sayfasına gidelim tum sayfanın resmini alalim
+        //Bestbuy sayfasına gidelim tum sayfanın resmini alalim
         driver.get("https://bestbuy.com");
         /*
         Bir web sayfanın resmini alabilmek için TakesScreenshot class'ın obje oluşturup

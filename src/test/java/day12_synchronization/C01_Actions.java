@@ -14,7 +14,7 @@ public class C01_Actions extends TestBaseBeforeAfter {
         Thread.sleep(3000);
         driver.findElement(By.cssSelector("a[href=\"/products\"]")).click();
         // ilk urune tiklayalim
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();// (Keys.PAGE_DOWN) bir tab kadar asagiya iniyoruz
         driver.findElement(By.cssSelector("a[data-product-id=\"1\"]")).click();
     }
 }

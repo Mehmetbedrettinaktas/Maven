@@ -27,19 +27,19 @@ public class C03_DeleteExcel {
         //-Cell objesi olusturun row.getCell(3)
         row.removeCell(cell);
         System.out.println(workbook.getSheet("Sayfa1").getRow(3).getCell(3));
-        /*
-        String  actualData = workbook
-        .getSheet("Sayfa1")
-        .getRow(3)
-        .getCell(3)
-        .toString();
 
+      //  String  actualData = workbook
+      //  .getSheet("Sayfa1")
+      //  .getRow(3)
+      //  .getCell(3)
+      //  .toString();
+        /*
         workbook.getSheet("Sayfa1").getRow(3).getCell(3).getStringCellValue().isBlank();
 
         row.removeCell(cell);
         System.out.println(workbook.getSheet("Sayfa1").getRow(3).getLastCellNum());
-         */
 
+        */
         /*
         Bir cell'deki veriyi silmek icin row objesine ihtiyac vardir.
         row objesi ile removeCell() methodunu kullanarak cell objesi ile bellirtigimiz
@@ -53,7 +53,7 @@ public class C03_DeleteExcel {
 
         //-Silindiğini test edin
         String expectedData="Cezayir";
-        String actualData=null;
-        Assert .assertNotEquals(expectedData,actualData);
+        String actualData=workbook.getSheet("Sayfa1").getRow(3).getCell(3).toString();
+        Assert .assertEquals(expectedData,actualData);
     }
 }
